@@ -40,7 +40,7 @@
 /* KORA_BRAND_BASE_START */
 @layer base {
   :root {
-    --header-h: 78px;
+    --header-h: 88px;
     --topbar-h: 40px;
     --site-chrome-h: 118px;
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
