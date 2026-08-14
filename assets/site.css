@@ -112,7 +112,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h) + var(--topbar-h) + 16px);
+  scroll-padding-top: calc(var(--header-h) + 16px);
   -webkit-text-size-adjust: 100%;
   overflow-x: clip;
 }
@@ -632,12 +632,6 @@ strong {
 /* --------------------------------------------------------------------------
    6. Topbar + header
    -------------------------------------------------------------------------- */
-.site-chrome {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
 .topbar {
   background: var(--primary-deep);
   color: rgba(255, 255, 255, 0.9);
@@ -747,6 +741,9 @@ strong {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: saturate(180%) blur(16px);
   -webkit-backdrop-filter: saturate(180%) blur(16px);
