@@ -1,18 +1,90 @@
+/* Source for assets/styles.css — Kora backend recompiles this file with the Tailwind CLI.
+   The full design system lives in assets/site.css so the site renders correctly even
+   before a Tailwind build runs. */
+/* source(none) disables Tailwind's automatic content detection so the build only
+   scans the two globs below. Without it a stray node_modules in the workspace
+   pulls in the entire utility set (~115 KB of dead CSS). */
 @import "tailwindcss";
 @source "../**/*.html";
-@source "../assets/**/*.js";
+@source "../js/**/*.js";
+
+/* KORA_BRAND_THEME_START */
 @theme {
   --color-primary: #3f6075;
   --color-secondary: #f4f7f5;
   --color-accent: #87a766;
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
+
+  --color-brand-primary: #3f6075;
+  --color-brand-primary-dark: #2c4557;
+  --color-brand-primary-light: #5b7d93;
+  --color-brand-primary-foreground: #ffffff;
+  --color-brand-secondary: #f4f7f5;
+  --color-brand-secondary-foreground: #16242e;
+  --color-brand-accent: #87a766;
+  --color-brand-accent-dark: #6c8a4d;
+  --color-brand-accent-foreground: #ffffff;
+  --color-brand-dark: #16242e;
+  --color-brand-ink: #16242e;
+  --color-brand-muted: #5c6f7c;
+  --color-brand-soft: #f4f7f5;
+  --color-brand-canvas: #ffffff;
+  --color-brand-border: rgba(63, 96, 117, 0.14);
+
+  --font-brand: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-heading: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-nav: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
+/* KORA_BRAND_THEME_END */
+
+/* KORA_BRAND_BASE_START */
 @layer base {
+  :root {
+    --header-h: 78px;
+    --topbar-h: 40px;
+    --site-chrome-h: 118px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --color-primary: #3f6075;
+    --color-secondary: #f4f7f5;
+    --color-accent: #87a766;
+
+    --color-brand-primary: #3f6075;
+    --color-brand-primary-dark: #2c4557;
+    --color-brand-primary-light: #5b7d93;
+    --color-brand-primary-foreground: #ffffff;
+    --color-brand-secondary: #f4f7f5;
+    --color-brand-secondary-foreground: #16242e;
+    --color-brand-accent: #87a766;
+    --color-brand-accent-dark: #6c8a4d;
+    --color-brand-accent-foreground: #ffffff;
+    --color-brand-dark: #16242e;
+    --color-brand-ink: #16242e;
+    --color-brand-muted: #5c6f7c;
+    --color-brand-soft: #f4f7f5;
+    --color-brand-canvas: #ffffff;
+    --color-brand-border: rgba(63, 96, 117, 0.14);
+
+    --font-brand: "Newsreader", Georgia, "Times New Roman", serif;
+    --font-heading: "Newsreader", Georgia, "Times New Roman", serif;
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-nav: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: var(--font-body);
+    color: var(--color-brand-ink);
+    background: var(--color-brand-canvas);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
 }
+/* KORA_BRAND_BASE_END */
