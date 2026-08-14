@@ -1,14 +1,2 @@
 User-agent: *
-Allow: /
-
-# AI crawlers — allowed, with a machine-readable summary at /llms.txt
-User-agent: GPTBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-Sitemap: https://jiomedfamilycare.com/sitemap.xml
+Disallow: /
