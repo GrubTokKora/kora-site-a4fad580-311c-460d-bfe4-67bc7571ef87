@@ -1889,6 +1889,11 @@ a.tile:hover {
   box-shadow: var(--shadow-lg);
 }
 
+.split-media--plain img {
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .split-media--framed {
   isolation: isolate;
 }
