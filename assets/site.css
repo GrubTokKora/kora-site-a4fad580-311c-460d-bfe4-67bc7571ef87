@@ -2520,6 +2520,117 @@ a.tile:hover {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
 }
 
+.review-carousel {
+  --review-gap: 1.1rem;
+}
+
+.review-carousel-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 2px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  outline: none;
+}
+
+.review-carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .review-carousel-viewport {
+    overflow-x: hidden;
+  }
+}
+
+.review-carousel-track {
+  display: flex;
+  align-items: stretch;
+  gap: var(--review-gap);
+}
+
+.review-carousel .review {
+  flex: 0 0 min(100%, 18.5rem);
+  min-height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media (min-width: 720px) {
+  .review-carousel .review {
+    flex-basis: calc((100% - var(--review-gap)) / 2);
+  }
+}
+
+@media (min-width: 1020px) {
+  .review-carousel .review {
+    flex-basis: calc((100% - (var(--review-gap) * 2)) / 3);
+  }
+}
+
+.review-carousel-ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: var(--sp-5);
+}
+
+.review-carousel-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease),
+    border-color 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+
+.review-carousel-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.review-carousel-btn:hover:not(:disabled) {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.review-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.review-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.review-carousel-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 99px;
+  background: var(--primary-200);
+  cursor: pointer;
+  transition: width 0.28s var(--ease), background-color 0.28s var(--ease);
+}
+
+.review-carousel-dot.is-active {
+  width: 1.35rem;
+  background: var(--primary);
+}
+
 .review {
   background: #fff;
   border: 1px solid var(--border);

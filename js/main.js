@@ -344,6 +344,127 @@
   }
 
   /* ======================================================================
+     Review carousel — drag, snap, arrows
+     ====================================================================== */
+  function initReviewCarousel() {
+    var root = document.querySelector("[data-review-carousel]");
+    if (!root) return;
+
+    var viewport = root.querySelector("[data-review-track]");
+    var prev = root.querySelector("[data-review-prev]");
+    var next = root.querySelector("[data-review-next]");
+    var dotsWrap = root.querySelector("[data-review-dots]");
+    var cards = root.querySelectorAll(".review");
+    if (!viewport || cards.length < 2) return;
+
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function gap() {
+      var track = viewport.querySelector(".review-carousel-track");
+      if (!track) return 16;
+      return parseFloat(window.getComputedStyle(track).gap) || 16;
+    }
+
+    function step() {
+      return cards[0].getBoundingClientRect().width + gap();
+    }
+
+    function maxScroll() {
+      return Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+    }
+
+    function pageCount() {
+      var s = step();
+      if (s <= 0) return 1;
+      return Math.max(1, Math.round(maxScroll() / s) + 1);
+    }
+
+    function currentPage() {
+      var s = step();
+      if (s <= 0) return 0;
+      return Math.max(0, Math.min(pageCount() - 1, Math.round(viewport.scrollLeft / s)));
+    }
+
+    function goTo(page) {
+      var s = step();
+      var left = Math.max(0, Math.min(maxScroll(), page * s));
+      viewport.scrollTo({ left: left, behavior: reduce ? "auto" : "smooth" });
+    }
+
+    function renderDots() {
+      if (!dotsWrap) return;
+      var pages = pageCount();
+      var page = currentPage();
+      if (dotsWrap.childElementCount !== pages) {
+        dotsWrap.innerHTML = "";
+        var i;
+        for (i = 0; i < pages; i++) {
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "review-carousel-dot";
+          btn.setAttribute("aria-label", "Go to reviews " + (i + 1));
+          btn.addEventListener(
+            "click",
+            (function (idx) {
+              return function () {
+                goTo(idx);
+              };
+            })(i)
+          );
+          dotsWrap.appendChild(btn);
+        }
+      }
+      Array.prototype.forEach.call(dotsWrap.children, function (dot, i) {
+        var on = i === page;
+        dot.classList.toggle("is-active", on);
+        if (on) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+    }
+
+    function updateUi() {
+      var left = viewport.scrollLeft;
+      if (prev) prev.disabled = left <= 6;
+      if (next) next.disabled = left >= maxScroll() - 6;
+      renderDots();
+    }
+
+    if (prev) {
+      prev.addEventListener("click", function () {
+        goTo(currentPage() - 1);
+      });
+    }
+    if (next) {
+      next.addEventListener("click", function () {
+        goTo(currentPage() + 1);
+      });
+    }
+
+    viewport.addEventListener(
+      "scroll",
+      function () {
+        window.requestAnimationFrame(updateUi);
+      },
+      { passive: true }
+    );
+    window.addEventListener("resize", function () {
+      updateUi();
+    });
+
+    viewport.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goTo(currentPage() + 1);
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goTo(currentPage() - 1);
+      }
+    });
+
+    updateUi();
+  }
+
+  /* ======================================================================
      Floating call button — hide at footer
      ====================================================================== */
   function initFabCall() {
@@ -386,6 +507,7 @@
     initLightbox();
     initForms();
     initHeroSlideshow();
+    initReviewCarousel();
     initFabCall();
     initYear();
   });
