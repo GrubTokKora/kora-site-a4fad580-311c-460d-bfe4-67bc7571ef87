@@ -1,43 +1,21 @@
 # JioMed Family Care
 
-> JioMed Family Medicine Clinic is a physician-owned family medicine practice at 11213 Nall Ave Ste 100, Leawood, KS 66211.
-> Dr. Ekta S. Patel, MD and Dr. Megha Teeka, MD, DABOM provide primary care for every age — same-day
-> acute care, annual wellness exams, chronic disease management, in-office procedures, in-house
-> diagnostics, medical weight management, concierge medicine and physician-led aesthetic medicine.
+> JioMed Family Care, located in Leawood, KS, focuses on uniting life and health. Their services aim to provide comprehensive care for families.
 
-## Practice details
-
-- Phone: (913) 291-0135
+## Location & Contact
+- Address: 11213 Nall Ave Ste 100, Leawood, KS 66211, United States
+- Phone: +19132910135
 - Email: info@jiomedfamilycare.com
-- Address: 11213 Nall Ave Ste 100, Leawood, KS 66211
-- Hours: Monday to Friday, 8 am – 5 pm. Closed Saturday and Sunday.
-- Booking: https://patientportal.advancedmd.com/157502/onlinescheduling/v2?streamlineOptions=2
-- Patient portal: https://pp-wfe-101.advancedmd.com/157502/account/logon
-- Insurance: all major plans accepted except Medicaid and Humana.
-- Rating: 5.0 out of 5 across 8 Google reviews.
 
-## Services
+## Hours
+- Monday: 8 am – 5 pm
+- Tuesday: 8 am – 5 pm
+- Wednesday: 8 am – 5 pm
+- Thursday: 8 am – 5 pm
+- Friday: 8 am – 5 pm
+- Saturday: Closed
+- Sunday: Closed
 
-- [Acute Care Appointments](https://jiomedfamilycare.com/acute-care-appointments): Same-day care for sudden illness
-- [Wellness Exams](https://jiomedfamilycare.com/wellness-exams): Annual physicals and preventive care
-- [Chronic Disease Management](https://jiomedfamilycare.com/chronic-disease-management): Ongoing care plans that hold
-- [Procedures](https://jiomedfamilycare.com/procedures): In-office dermatology and gynecology
-- [Diagnostic &amp; Testing](https://jiomedfamilycare.com/diagnostic-testing-services): In-house labs with fast results
-- [Weight Management](https://jiomedfamilycare.com/weight-management): Medical weight loss with Enara Health
-- [Concierge Medicine](https://jiomedfamilycare.com/concierge-medicine): Direct access to your physician
-- [Aesthetic Medicine](https://jiomedfamilycare.com/aesthetic-medicine): Physician-led cosmetic treatments
-
-## Key pages
-
-- [Home](https://jiomedfamilycare.com/): overview of the practice, physicians and services.
-- [About](https://jiomedfamilycare.com/about): profiles of Dr. Ekta S. Patel and Dr. Megha Teeka.
-- [Services](https://jiomedfamilycare.com/services): full service directory.
-- [Self-Pay Packages](https://jiomedfamilycare.com/packages): acute visit $135, annual physical $175, chronic disease bundles $450 (6 months) and $900 (1 year).
-- [Contact](https://jiomedfamilycare.com/contact): location, hours, map and appointment request form.
-- [Gallery](https://jiomedfamilycare.com/gallery): clinic and community photos.
-
-## Notes
-
-- Concierge medicine membership: $40/month individual, $30/month additional adult, $10/month children 0–18.
-- Weight management is delivered in partnership with Enara Health and led by a board-certified obesity medicine physician.
-- For medical emergencies, call 911. This site is not monitored for emergencies.
+## Action Links
+- Reserve a Table: https://patientportal.advancedmd.com/157502/onlinescheduling/v2?streamlineOptions=2
+- Order Online: https://pp-wfe-101.advancedmd.com/157502/account/logon
