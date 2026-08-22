@@ -2,6 +2,15 @@
 
 <html lang="en-US">
 <head>
+<!-- KORA_TRACKING_GTM_HEAD_START -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MRV76CFQ');</script>
+<!-- End Google Tag Manager -->
+<!-- KORA_TRACKING_GTM_HEAD_END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#3f6075" name="theme-color"/>
@@ -9,7 +18,7 @@
 <title>Self-Pay Packages &amp; Pricing | JioMed Family Care, Leawood KS</title>
 <meta content="Transparent self-pay pricing at JioMed Family Care in Leawood, KS: acute visits $135, annual physicals $175, and 6-month or 1-year chronic disease bundles." name="description"/>
 <meta content="self pay doctor Leawood KS, cash pay primary care Kansas, uninsured doctor visit price Leawood, affordable family medicine Kansas City" name="keywords"/>
-<meta content="noindex, nofollow" name="robots"/>
+
 <meta content="JioMed Family Medicine Clinic" name="author"/>
 <meta content="US-KS" name="geo.region"/>
 <meta content="Leawood, KS" name="geo.placename"/>
@@ -192,12 +201,18 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
 
-</link></link><!-- KORA_FAVICON_START -->
+</link></link><link href="https://jiomedfamilycare.com/packages" rel="canonical"/><meta content="https://jiomedfamilycare.com/packages" property="og:url"/><!-- KORA_FAVICON_START -->
 <link href="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/a4fad580-311c-460d-bfe4-67bc7571ef87/de8c94d8-887e-4625-825f-ec262dbc28df/1786717755_lqs12r.png" rel="icon" type="image/png"/>
 <link href="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/a4fad580-311c-460d-bfe4-67bc7571ef87/de8c94d8-887e-4625-825f-ec262dbc28df/1786717755_lqs12r.png" rel="apple-touch-icon"/>
 <!-- KORA_FAVICON_END -->
 </head>
 <body>
+<!-- KORA_TRACKING_GTM_BODY_START -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRV76CFQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- KORA_TRACKING_GTM_BODY_END -->
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="topbar">
 <div class="container topbar-inner">
@@ -532,6 +547,55 @@
 </a>
 <script defer="" src="js/includes.js"></script>
 <script defer="" src="js/main.js"></script>
+<!-- KORA_TRACKING_EVENTS_START -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function trackEvent(eventName, params) {
+    window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    function cleanText(value) {
+      return (value || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function toPath(href) {
+      try {
+        if (!href) return null;
+        var url = new URL(href, window.location.origin);
+        return url.pathname || '/';
+      } catch (e) {
+        return null;
+      }
+    }
+
+    document.querySelectorAll('button, a').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var clickId =
+          el.getAttribute('data-kora-click-id') ||
+          el.getAttribute('data-analytics-id') ||
+          el.getAttribute('id') ||
+          null;
+        var clickLabel =
+          el.getAttribute('data-kora-click-label') ||
+          cleanText(el.innerText || el.textContent || '') ||
+          null;
+        var href = el.getAttribute('href') || null;
+        trackEvent('button_click', {
+          click_id: clickId,
+          click_label: clickLabel,
+          page_path: window.location.pathname || '/',
+          link_url: href,
+          element_id: el.getAttribute('id') || null,
+          element_class: el.getAttribute('class') || null,
+          link_path: toPath(href),
+        });
+      });
+    });
+  });
+</script>
+<!-- KORA_TRACKING_EVENTS_END -->
 <!-- KORA_BRANDING_FOOTER_SCRIPT_START -->
 <script>
 (function () {
