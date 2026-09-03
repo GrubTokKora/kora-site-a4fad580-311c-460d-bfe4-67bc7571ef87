@@ -1319,6 +1319,11 @@ strong {
   margin-bottom: 0;
 }
 
+/* Keep brand line as the display headline while the eyebrow stays in the H1 for SEO. */
+.hero h1 .hero-title {
+  display: block;
+}
+
 .hero-copy {
   color: rgba(255, 255, 255, 0.84);
   font-size: var(--fs-base);
