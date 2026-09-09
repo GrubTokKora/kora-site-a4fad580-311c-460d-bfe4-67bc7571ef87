@@ -1,4 +1,4 @@
-# Site index · format 1
+# Site index · format 2
 Structure and the names of what each page offers. Values that change often — prices, hours, phone,
 address — and body copy are deliberately not recorded here; read the page itself for those.
 
@@ -178,6 +178,16 @@ purpose: The not-found page shown when a URL does not exist.
 sections:
 - `#main` "We couldn't find that page" — the message and the links back into the site
 also: This page is served for URLs that do not exist, so its links are the only way back. A navigation change that removes a page has to leave this page's links pointing somewhere real.
+
+## support files
+Files that are not pages. A line marked [content] holds words or data a visitor reads, so a
+change to the site's content can land there; the rest only make the site work or look right.
+- `llms.txt` — a plain-text summary of the business for AI crawlers — derived from the site by the deploy, not written by hand
+- `robots.txt` — crawler rules and the sitemap link — derived from the site by the deploy, not written by hand
+- `sitemap.xml` — the list of page URLs — derived from the site by the deploy, not written by hand
+- `assets/site.css` — the site's styling, brand colours and type scale
+- `js/includes.js` — THE PRACTICE'S OWN DETAILS used across every page — the phone, fax, email, address, map link and patient portal link  [content]
+- `js/main.js` — page behaviour and the FAQ accordions
 
 ## shared (every page)
 The header, navigation, mobile menu and footer are propagated from index.html to every other page by
