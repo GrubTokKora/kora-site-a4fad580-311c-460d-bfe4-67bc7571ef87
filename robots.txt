@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /.kora/
 Sitemap: https://jiomedfamilycare.com/sitemap.xml
