@@ -119,7 +119,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="https://jiomedfamilycare.com/gallery" rel="canonical"/><meta content="https://jiomedfamilycare.com/gallery" property="og:url"/>
+<link href="https://jiomedfamilycare.com/gallery" rel="canonical"><meta content="https://jiomedfamilycare.com/gallery" property="og:url"/>
 
 </link></link><!-- KORA_FAVICON_START -->
 <link href="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/a4fad580-311c-460d-bfe4-67bc7571ef87/de8c94d8-887e-4625-825f-ec262dbc28df/1786717755_lqs12r.png" rel="icon" type="image/png"/>
@@ -471,7 +471,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 (function () {
   var koraUrl = "https://askkora.ai";
-  var muted = "#64748b";
+  var muted = "#475569";
+  var mutedBg = "#f1f5f9";
   var blue = "#1E88E5";
   var purple = "#7B1FA2";
   var startMarker = 'KORA_' + 'BRANDING_FOOTER_START';
@@ -499,7 +500,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     wrapper.className = 'kora-powered-by';
     wrapper.setAttribute('data-kora-branding-footer', 'true');
     wrapper.style.cssText = 'display:flex;justify-content:flex-end;align-items:center;gap:0.35rem;padding:0.75rem 1rem;font-size:0.75rem;';
-    wrapper.innerHTML = '<span style="color:' + muted + '">Powered by</span>' +
+    wrapper.innerHTML = '<span style="color:' + muted + ';background:' + mutedBg + ';padding:0.15rem 0.55rem;border-radius:9999px;">Powered by</span>' +
       '<a href="' + koraUrl + '" target="_blank" rel="nofollow noopener noreferrer" style="text-decoration:none;font-weight:600;background:linear-gradient(135deg,' + blue + ',' + purple + ');-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Kora</a>';
     return wrapper;
   }
