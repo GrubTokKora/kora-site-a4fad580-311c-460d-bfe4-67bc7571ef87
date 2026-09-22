@@ -116,6 +116,22 @@ sections:
 - `#faq` "Aesthetic medicine questions" — a four-question accordion
 also: This is the only service page whose treatments each have their own id and section. Every other service page keeps its offerings inside `#main` with no id, so a change addressed by anchor works here and nowhere else.
 also: MORPHEUS8 is written in capitals while every other treatment heading is in title case.
+also: `#morpheus8` ends with a button linking to morpheus8.html — the only place on this page that points at a treatment's own page. The section stays the overview; the offer lives only on morpheus8.html.
+
+## morpheus8.html → /morpheus8
+title: Morpheus8 in Leawood, KS | $500 Off Treatment | JioMed
+purpose: The Morpheus8 landing page for paid search — the offer, the treatment itself and an FAQ.
+sections:
+- `#main` "Morpheus8 in Leawood, KS — $500 off your treatment" — the page body
+- `#offer` "A complimentary physician consultation, and $500 off your Morpheus8 treatment" — the two offer cards, Your consultation and Your treatment, and how to claim it by phone
+- `#treatment` "What Morpheus8 is, and what a session involves" — the treatment content: What it does, How long does it take to treat a body area?, When will I see results? How many sessions?
+- `#what-to-expect` "From your phone call to your follow-up" — the four steps: Call, Consultation, Treatment, Follow up, and who should not be treated
+- `#faq` "Morpheus8 questions" — a six-question accordion, with `#faq-trigger-0` to `#faq-trigger-5` and `#faq-panel-0` to `#faq-panel-5`
+also: This is a treatment page, not a service line. It is deliberately absent from `#services` on index.html, from services.html and from the header, footer and mobile nav — the only ways in are the button in `#morpheus8` on aesthetic-medicine.html and the ad it is the landing page for.
+also: The page names nobody as performing the treatment, and carries no testimonials — unlike every other service page, which ends with three named reviews. Both were removed deliberately; re-adding either is a decision, not a tidy-up.
+also: The offer — a complimentary consultation and $500 off — is stated in the title tag, the hero, `#offer`, `#faq` and the closing CTA band, and appears nowhere else on the site. Withdrawing it is five edits here plus that button on aesthetic-medicine.html.
+also: The treatment copy in `#treatment` is the same wording as `#morpheus8` on aesthetic-medicine.html. A clinical correction has to reach both.
+also: Booking for this offer is by phone, so every call to action is a `tel:` link rather than the AdvancedMD scheduler the other pages lead with.
 
 ## packages.html → /packages
 title: Self-Pay Packages & Pricing | JioMed Family Care, Leawood KS
