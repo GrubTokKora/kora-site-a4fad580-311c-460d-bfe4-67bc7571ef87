@@ -1,10 +1,10 @@
 # JioMed Family Care
 
-> Physician-owned family medicine clinic in Leawood, KS. Where life and health unite — same-day acute care, wellness exams, chronic disease management, in-office procedures, diagnostics, weight management, concierge medicine, and aesthetic medicine.
+> JioMed Family Care — Where Life and Health Unite
 
 ## Location & Contact
 - Address: 11213 Nall Ave Ste 100, Leawood, KS 66211, United States
-- Phone: (913) 291-0135
+- Phone: +19132910135
 - Email: info@jiomedfamilycare.com
 - Website: https://jiomedfamilycare.com
 
@@ -18,32 +18,27 @@
 - Sunday: Closed
 
 ## Pages
-- [Home](https://jiomedfamilycare.com/): Overview of the practice and services
-- [About](https://jiomedfamilycare.com/about): Practice story and physician profiles — Ekta S. Patel, MD and Megha Teeka, MD, DABOM
-- [Services](https://jiomedfamilycare.com/services): Full list of family medicine services
-- [Contact](https://jiomedfamilycare.com/contact): Address, phone, and contact form
-- [Packages & Pricing](https://jiomedfamilycare.com/packages): Self-pay and membership pricing
-- [Gallery](https://jiomedfamilycare.com/gallery): Clinic photos
+- [Family doctor in Leawood, KS Where life and health unite](https://jiomedfamilycare.com/)
+- [About JioMed Family Care](https://jiomedfamilycare.com/about)
+- [Acute Care Appointments](https://jiomedfamilycare.com/acute-care-appointments)
+- [Aesthetic Medicine](https://jiomedfamilycare.com/aesthetic-medicine)
+- [Chronic Disease Management](https://jiomedfamilycare.com/chronic-disease-management)
+- [Concierge Medicine](https://jiomedfamilycare.com/concierge-medicine)
+- [Contact Us](https://jiomedfamilycare.com/contact)
+- [Diagnostic &amp; Testing Services](https://jiomedfamilycare.com/diagnostic-testing-services)
+- [Gallery](https://jiomedfamilycare.com/gallery)
+- [Self-Pay Packages](https://jiomedfamilycare.com/packages)
+- [Privacy Policy](https://jiomedfamilycare.com/privacy-policy)
+- [In-Office Procedures](https://jiomedfamilycare.com/procedures)
+- [Services](https://jiomedfamilycare.com/services)
+- [Terms and Conditions](https://jiomedfamilycare.com/terms)
+- [Weight Management with Enara Health](https://jiomedfamilycare.com/weight-management)
+- [Wellness Exams](https://jiomedfamilycare.com/wellness-exams)
 
-## Services
-- [Acute Care Appointments](https://jiomedfamilycare.com/acute-care-appointments): Same-day sick visits
-- [Wellness Exams](https://jiomedfamilycare.com/wellness-exams): Annual physicals and preventive care
-- [Chronic Disease Management](https://jiomedfamilycare.com/chronic-disease-management): Ongoing care for chronic conditions
-- [In-Office Procedures](https://jiomedfamilycare.com/procedures): Dermatology, gyn, and other procedures
-- [Diagnostic & Testing](https://jiomedfamilycare.com/diagnostic-testing-services): On-site testing during visits
-- [Weight Management](https://jiomedfamilycare.com/weight-management): Medical weight management with Enara Health
-- [Concierge Medicine](https://jiomedfamilycare.com/concierge-medicine): Membership-based primary care
-- [Aesthetic Medicine](https://jiomedfamilycare.com/aesthetic-medicine): Aesthetic treatments
-
-## Book & Portal
-- [Schedule an Appointment](https://patientportal.advancedmd.com/157502/onlinescheduling/v2?streamlineOptions=2): Online scheduling
-- [Patient Portal](https://pp-wfe-101.advancedmd.com/157502/account/logon): AdvancedMD patient login
+## Action Links
+- [Reserve a Table](https://patientportal.advancedmd.com/157502/onlinescheduling/v2?streamlineOptions=2)
+- [Order Online](https://pp-wfe-101.advancedmd.com/157502/account/logon)
 
 ## Social
-- [Facebook](https://www.facebook.com/profile.php?id=61553130548609)
 - [Instagram](https://www.instagram.com/jiomed_familycare)
-
-## Optional
-- [Privacy Policy](https://jiomedfamilycare.com/privacy-policy)
-- [Terms](https://jiomedfamilycare.com/terms)
-- [Google Maps](https://maps.app.goo.gl/uydjeEFA5wATkqZb6)
+- [Facebook](https://www.facebook.com/profile.php?id=61553130548609)
