@@ -24,9 +24,10 @@ title: About Us | JioMed Family Care | Leawood, KS
 purpose: The about page — the practice's story and a full profile for each physician.
 sections:
 - `#main` "About JioMed Family Care" — the page body
-- `#physicians` "Your doctors" — the two physician profiles
+- `#physicians` "Your doctors" — the physician profiles
 - `#dr-megha-teeka` "Dr. Megha Teeka, MD, DABOM" — her profile
 - `#dr-ekta-patel` "Ekta S. Patel, MD" — her profile
+- `#dr-rommel-asagwara` "Rommel Asagwara, MD" — his profile
 - `#testimonials` "What our patients say" — the same six named patient reviews
 also: Dr. Teeka is written as "Dr. Megha Teeka, MD, DABOM" here and as "Megha Teeka, MD, DABOM" on index.html. Her post-nominals are part of the heading text and of her article's id, so a credential change touches both.
 
