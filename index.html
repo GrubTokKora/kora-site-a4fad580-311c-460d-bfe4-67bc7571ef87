@@ -343,6 +343,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- KORA_TRACKING_GTM_BODY_END -->
 
 <a class="skip-link" href="#main">Skip to main content</a>
+<aside aria-label="Event Announcement" class="announcement-bar">
+<div class="container announcement-bar-inner">
+<span class="announcement-bar-badge"><svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>Upcoming Event</span>
+<p class="announcement-bar-text"><strong>Aesthetics Launch Party</strong> — Oct 29, 2026 · Win over $500 in medical-grade skin care!</p>
+<div class="announcement-bar-actions">
+<a class="announcement-bar-btn" href="#events" id="banner-event-btn">Event Details <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="announcement-bar-btn announcement-bar-btn--phone" href="tel:+19132910135"><svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg>(913) 291-0135</a>
+</div>
+</div>
+</aside>
 <div class="topbar">
 <div class="container topbar-inner">
 <div class="topbar-left">
@@ -996,6 +1006,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       viewDate = new Date(2026, 9, 1);
       renderCalendar();
     });
+
+    var bannerBtn = document.getElementById('banner-event-btn');
+    if (bannerBtn) {
+      bannerBtn.addEventListener('click', function() {
+        if (EVENTS_DATA && EVENTS_DATA.length > 0) {
+          openModal(EVENTS_DATA[0]);
+        }
+      });
+    }
 
     document.getElementById('events-modal-close').addEventListener('click', closeModal);
     document.getElementById('events-modal').addEventListener('click', function(e) {
