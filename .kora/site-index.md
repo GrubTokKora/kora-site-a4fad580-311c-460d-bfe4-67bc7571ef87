@@ -11,6 +11,7 @@ sections:
 - `#services` "Complete family medicine, under one roof" — the eight service lines, each linking to its own page: Acute Care Appointments, Wellness Exams, Chronic Disease Management, In-Office Procedures, Diagnostic & Testing, Weight Management, Concierge Medicine, Aesthetic Medicine
 - `#physicians` "Two board-certified family physicians" — the doctors: Ekta S. Patel, MD, Megha Teeka, MD, DABOM
 - `#why-choose-us` "Why families choose JioMed Family Medicine Clinic" — the differentiators: Physician-Directed Care, Quick Access, Trustworthy Care, Comprehensive Services
+- `#events` "Upcoming practice events" — the calendar and list view for community and practice events, featuring the JioMed Family Care Aesthetics Launch Party
 - `#testimonials` "What our patients say" — six named patient reviews: Leann Long, Megan Cordell, Vicki Reynolds, Peggy McEwen, Tracy Mauk, Joe Abarca
 - `#appointment` "Your Health Journey Starts Here" — the ways to reach the clinic, naming the patient portal AdvancedMD
 - `#faq` "Frequently asked questions" — a six-question accordion

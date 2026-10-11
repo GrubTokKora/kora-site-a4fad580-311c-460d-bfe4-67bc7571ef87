@@ -691,6 +691,323 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </section>
+<section class="section" id="events">
+<div class="container">
+<div class="section-head section-head--center" data-reveal="">
+<span class="eyebrow">Events &amp; Community</span>
+<h2>Upcoming practice events</h2>
+<p>Connect with our physicians, celebrate milestones, and discover health and wellness experiences at JioMed Family Care.</p>
+</div>
+<div class="events-toolbar" data-reveal="">
+<div aria-label="Event display options" class="events-view-toggle" role="tablist">
+<button aria-selected="true" class="events-view-btn is-active" data-events-toggle="calendar" role="tab" type="button">Calendar</button>
+<button aria-selected="false" class="events-view-btn" data-events-toggle="list" role="tab" type="button">List</button>
+</div>
+<div class="events-cal-nav" id="events-cal-nav-group">
+<button aria-label="Previous month" class="events-nav-btn" id="events-prev-month" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg></button>
+<h3 aria-live="polite" class="events-cal-title" id="events-cal-title"></h3>
+<button aria-label="Next month" class="events-nav-btn" id="events-next-month" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+<button class="events-today-btn" id="events-today-btn" type="button">Today</button>
+<button class="events-today-btn" id="events-jump-btn" type="button">Upcoming (Oct 2026)</button>
+</div>
+</div>
+<div class="events-calendar-wrap" data-reveal="" id="events-calendar-view" role="tabpanel">
+<div class="price-table-wrap" style="border:none;">
+<table class="events-calendar-table">
+<caption class="sr-only">Monthly events calendar</caption>
+<thead>
+<tr>
+<th scope="col">Sun</th>
+<th scope="col">Mon</th>
+<th scope="col">Tue</th>
+<th scope="col">Wed</th>
+<th scope="col">Thu</th>
+<th scope="col">Fri</th>
+<th scope="col">Sat</th>
+</tr>
+</thead>
+<tbody id="events-calendar-body">
+</tbody>
+</table>
+</div>
+</div>
+<div class="events-list-view" data-reveal="" id="events-list-view" role="tabpanel" style="display:none;">
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="events-modal-backdrop" id="events-modal" role="dialog">
+<div class="events-modal-card">
+<button aria-label="Close event details" class="events-modal-close" id="events-modal-close" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+</button>
+<div class="events-modal-hero" id="events-modal-hero-wrap">
+<img alt="JioMed Family Care event" id="events-modal-img" src=""/>
+</div>
+<div class="events-modal-body">
+<span class="events-badge" id="events-modal-badge"></span>
+<h3 id="events-modal-title"></h3>
+<div class="events-meta-row" id="events-modal-date-row">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="4"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+<span id="events-modal-date"></span>
+</div>
+<div class="events-meta-row" id="events-modal-loc-row">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<span id="events-modal-location"></span>
+</div>
+<p class="lede" id="events-modal-short" style="margin-top:0.35rem;font-size:var(--fs-base);"></p>
+<div class="events-modal-desc" id="events-modal-full"></div>
+<div class="btn-row mt-3" id="events-modal-actions"></div>
+</div>
+</div>
+</div>
+</section>
+<script>
+(function() {
+  var EVENTS_DATA = [
+    {
+      id: "de9daff9-691f-42bc-bc22-dabd64489e69",
+      title: "JioMed Family Care Aesthetics Launch Party",
+      short_description: "Join us in Leawood to celebrate the launch of aesthetic medicine at JioMed Family Care, with a chance to win over $500 in medical grade skin care. Spots are limited, so call 913-291-0135 to reserve.",
+      full_description: "JioMed Family Care is introducing physician-led aesthetic medicine, and you are invited to the launch party. Come see the newest addition to the practice at our Leawood clinic.\n\nThe evening is a relaxed, unhurried chance to learn about aesthetics in a calm, clinical setting. Our physician-owned practice, brings the same warm, trustworthy care to skin health and aesthetics that patients already know from our family medicine services.\n\nOne guest could win over $500 in medical grade skin care.\n\nSpace is limited. Call us at 913-291-0135 to reserve your spot.",
+      start_datetime: "2026-10-29T21:00:00+00:00",
+      end_datetime: "",
+      timezone: "",
+      location_text: "11213 Nall Ave Ste 100, Leawood, KS",
+      category: "launch party",
+      slug: "",
+      ticket_url: "",
+      hero_image_url: "https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/a4fad580-311c-460d-bfe4-67bc7571ef87/medialibrary/1791683862_vi3vme.jpg"
+    }
+  ];
+
+  var activeView = 'calendar';
+  var viewDate = new Date();
+
+  function parseEventDate(iso) {
+    if (!iso) return null;
+    var parts = iso.split('T')[0].split('-');
+    return {
+      year: parseInt(parts[0], 10),
+      month: parseInt(parts[1], 10) - 1,
+      day: parseInt(parts[2], 10)
+    };
+  }
+
+  function formatDisplayDate(iso) {
+    var d = parseEventDate(iso);
+    if (!d) return '';
+    var dateObj = new Date(d.year, d.month, d.day);
+    return dateObj.toLocaleDateString('en-US', {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }) + ' · 4:00 PM CDT';
+  }
+
+  function openModal(ev) {
+    var modal = document.getElementById('events-modal');
+    var img = document.getElementById('events-modal-img');
+    var heroWrap = document.getElementById('events-modal-hero-wrap');
+    var badge = document.getElementById('events-modal-badge');
+    var title = document.getElementById('events-modal-title');
+    var dateEl = document.getElementById('events-modal-date');
+    var locEl = document.getElementById('events-modal-location');
+    var shortEl = document.getElementById('events-modal-short');
+    var fullEl = document.getElementById('events-modal-full');
+    var actionsEl = document.getElementById('events-modal-actions');
+
+    if (ev.hero_image_url) {
+      img.src = ev.hero_image_url;
+      img.alt = ev.title;
+      heroWrap.style.display = 'block';
+    } else {
+      heroWrap.style.display = 'none';
+    }
+
+    badge.textContent = ev.category || 'Event';
+    title.textContent = ev.title;
+    dateEl.textContent = formatDisplayDate(ev.start_datetime);
+    locEl.textContent = ev.location_text || '';
+    shortEl.textContent = ev.short_description || '';
+    fullEl.textContent = ev.full_description || '';
+
+    var actionsHtml = '';
+    if (ev.ticket_url && ev.ticket_url.trim() !== '') {
+      actionsHtml = '<a class="btn btn-accent" href="' + ev.ticket_url + '" target="_blank" rel="noopener noreferrer">Register / Book</a>';
+    } else {
+      actionsHtml = '<a class="btn btn-accent" href="tel:+19132910135"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (913) 291-0135 to Reserve</a>';
+    }
+    actionsEl.innerHTML = actionsHtml;
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    var modal = document.getElementById('events-modal');
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function renderCalendar() {
+    var y = viewDate.getFullYear();
+    var m = viewDate.getMonth();
+    var titleEl = document.getElementById('events-cal-title');
+    titleEl.textContent = new Date(y, m, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    var firstDay = new Date(y, m, 1).getDay();
+    var daysInMonth = new Date(y, m + 1, 0).getDate();
+    var prevMonthDays = new Date(y, m, 0).getDate();
+
+    var today = new Date();
+    var isCurrentYearMonth = today.getFullYear() === y && today.getMonth() === m;
+    var todayDate = today.getDate();
+
+    var tbody = document.getElementById('events-calendar-body');
+    tbody.innerHTML = '';
+
+    var dayCounter = 1;
+    var nextMonthCounter = 1;
+
+    for (var r = 0; r < 6; r++) {
+      var tr = document.createElement('tr');
+      for (var c = 0; c < 7; c++) {
+        var td = document.createElement('td');
+        var cellIndex = r * 7 + c;
+
+        if (cellIndex < firstDay) {
+          td.className = 'is-other-month';
+          var prevDay = prevMonthDays - (firstDay - cellIndex - 1);
+          td.innerHTML = '<span class="events-day-num">' + prevDay + '</span>';
+        } else if (dayCounter <= daysInMonth) {
+          var thisDay = dayCounter;
+          var isTdToday = isCurrentYearMonth && thisDay === todayDate;
+          if (isTdToday) td.classList.add('is-today');
+
+          var dayEvents = EVENTS_DATA.filter(function(ev) {
+            var ed = parseEventDate(ev.start_datetime);
+            return ed && ed.year === y && ed.month === m && ed.day === thisDay;
+          });
+
+          var html = '<span class="events-day-num">' + thisDay + '</span>';
+          if (dayEvents.length > 0) {
+            td.classList.add('has-event');
+            dayEvents.forEach(function(ev) {
+              html += '<button type="button" class="events-cal-pill" title="' + ev.title + '">' + ev.title + '</button>';
+            });
+            (function(evList) {
+              td.addEventListener('click', function() {
+                openModal(evList[0]);
+              });
+            })(dayEvents);
+          }
+          td.innerHTML = html;
+          dayCounter++;
+        } else {
+          td.className = 'is-other-month';
+          td.innerHTML = '<span class="events-day-num">' + nextMonthCounter + '</span>';
+          nextMonthCounter++;
+        }
+        tr.appendChild(td);
+      }
+      tbody.appendChild(tr);
+      if (dayCounter > daysInMonth) break;
+    }
+  }
+
+  function renderList() {
+    var container = document.getElementById('events-list-view');
+    container.innerHTML = '';
+    EVENTS_DATA.forEach(function(ev) {
+      var card = document.createElement('article');
+      card.className = 'events-list-card';
+      var thumbHtml = ev.hero_image_url
+        ? '<div class="events-list-thumb"><img src="' + ev.hero_image_url + '" alt="' + ev.title + '" loading="lazy" /></div>'
+        : '';
+      card.innerHTML = thumbHtml +
+        '<div class="events-list-body">' +
+        '<span class="events-badge">' + (ev.category || 'Event') + '</span>' +
+        '<h3 class="events-list-title">' + ev.title + '</h3>' +
+        '<div class="events-meta-row"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="4"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg><span>' + formatDisplayDate(ev.start_datetime) + '</span></div>' +
+        '<div class="events-meta-row"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>' + (ev.location_text || '') + '</span></div>' +
+        '<p class="muted" style="font-size:var(--fs-sm);margin:0.25rem 0 0.5rem;">' + (ev.short_description || '') + '</p>' +
+        '<div class="card-link" style="margin-top:auto;">View Event Details <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>' +
+        '</div>';
+
+      card.addEventListener('click', function() {
+        openModal(ev);
+      });
+      container.appendChild(card);
+    });
+  }
+
+  function setView(view) {
+    activeView = view;
+    var toggleButtons = document.querySelectorAll('[data-events-toggle]');
+    var calView = document.getElementById('events-calendar-view');
+    var listView = document.getElementById('events-list-view');
+    var calNav = document.getElementById('events-cal-nav-group');
+
+    toggleButtons.forEach(function(btn) {
+      var isTarget = btn.getAttribute('data-events-toggle') === view;
+      btn.classList.toggle('is-active', isTarget);
+      btn.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+    });
+
+    if (view === 'calendar') {
+      calView.style.display = 'block';
+      calNav.style.display = 'inline-flex';
+      listView.style.display = 'none';
+    } else {
+      calView.style.display = 'none';
+      calNav.style.display = 'none';
+      listView.style.display = 'grid';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    renderCalendar();
+    renderList();
+
+    document.querySelectorAll('[data-events-toggle]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        setView(this.getAttribute('data-events-toggle'));
+      });
+    });
+
+    document.getElementById('events-prev-month').addEventListener('click', function() {
+      viewDate.setMonth(viewDate.getMonth() - 1);
+      renderCalendar();
+    });
+
+    document.getElementById('events-next-month').addEventListener('click', function() {
+      viewDate.setMonth(viewDate.getMonth() + 1);
+      renderCalendar();
+    });
+
+    document.getElementById('events-today-btn').addEventListener('click', function() {
+      viewDate = new Date();
+      renderCalendar();
+    });
+
+    document.getElementById('events-jump-btn').addEventListener('click', function() {
+      viewDate = new Date(2026, 9, 1);
+      renderCalendar();
+    });
+
+    document.getElementById('events-modal-close').addEventListener('click', closeModal);
+    document.getElementById('events-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  });
+})();
+</script>
 <section class="section section--soft" id="testimonials">
 <div class="container">
 <div class="section-head section-head--center" data-reveal="">
