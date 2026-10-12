@@ -1016,6 +1016,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     }
 
+    // Automatically display the event modal for first-time visitors
+    try {
+      var eventKey = 'jiomed_event_seen_' + (EVENTS_DATA[0] && EVENTS_DATA[0].id ? EVENTS_DATA[0].id : 'active');
+      if (!localStorage.getItem(eventKey)) {
+        setTimeout(function() {
+          if (EVENTS_DATA && EVENTS_DATA.length > 0) {
+            openModal(EVENTS_DATA[0]);
+            try {
+              localStorage.setItem(eventKey, 'true');
+            } catch (storageErr) {}
+          }
+        }, 1200);
+      }
+    } catch (err) {}
+
+    if (window.location.hash === '#events') {
+      setTimeout(function() {
+        if (EVENTS_DATA && EVENTS_DATA.length > 0) {
+          openModal(EVENTS_DATA[0]);
+        }
+      }, 500);
+    }
+
     document.getElementById('events-modal-close').addEventListener('click', closeModal);
     document.getElementById('events-modal').addEventListener('click', function(e) {
       if (e.target === this) closeModal();

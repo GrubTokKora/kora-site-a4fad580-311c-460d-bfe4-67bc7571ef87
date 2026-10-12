@@ -4305,11 +4305,12 @@ a.tile:hover {
 
 /* Announcement bar */
 .announcement-bar {
-  background: linear-gradient(90deg, #1d3140 0%, #2c4557 45%, #46602f 100%);
+  background: linear-gradient(90deg, #c2410c 0%, #ea580c 28%, #d97706 65%, #65a30d 100%);
   color: #fff;
   padding: 0.55rem 1rem;
   font-size: var(--fs-sm);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 3px 12px rgba(194, 65, 12, 0.22);
   position: relative;
   z-index: 101;
 }
@@ -4327,7 +4328,7 @@ a.tile:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: var(--accent-deep);
+  background: rgba(20, 34, 44, 0.55);
   color: #fff;
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   font-size: var(--fs-xs);
