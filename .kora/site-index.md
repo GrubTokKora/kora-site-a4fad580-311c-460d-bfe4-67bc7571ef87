@@ -9,6 +9,7 @@ sections:
 - `#main` "Family doctor in Leawood, KS — Where life and health unite" — the page body, holding the hero and every section below it
 - `#about` "Care from physicians who know your name" — the practice's approach, with its four points: One on One Care, Non-Emergent Visits, Quick Clinical Support, Insurance Accepted
 - `#services` "Complete family medicine, under one roof" — the eight service lines, each linking to its own page: Acute Care Appointments, Wellness Exams, Chronic Disease Management, In-Office Procedures, Diagnostic & Testing, Weight Management, Concierge Medicine, Aesthetic Medicine
+- `#payment-plans` "Payment plans for $500 or more" — Cherry patient financing, linking to the Cherry application
 - `#physicians` "Two board-certified family physicians" — the doctors: Ekta S. Patel, MD, Megha Teeka, MD, DABOM
 - `#why-choose-us` "Why families choose JioMed Family Medicine Clinic" — the differentiators: Physician-Directed Care, Quick Access, Trustworthy Care, Comprehensive Services
 - `#events` "Upcoming practice events" — the calendar and list view for community and practice events, featuring the JioMed Family Care Aesthetics Launch Party
@@ -108,6 +109,7 @@ title: Aesthetic Medicine in Leawood, KS | Botox, Filler | JioMed
 purpose: The aesthetics page — each treatment offered, with its own section and an FAQ.
 sections:
 - `#main` "Aesthetic Medicine" — the page body
+- `#payment-plans` "Payment plans for $500 or more" — Cherry patient financing, linking to the Cherry application
 - `#morpheus8` "MORPHEUS8" — the treatment and what it does
 - `#diolaze-xl` "Diolaze XL Laser Hair Removal" — the treatment and what it does
 - `#neurotoxin` "Neurotoxin Treatments (Botox / Dysport / Xeomin)" — the treatment and the brands offered
